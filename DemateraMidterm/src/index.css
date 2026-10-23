@@ -1,0 +1,157 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #f1f5f9;
+  background: #080d20;
+
+  --navy: #080d20;
+  --card: #111a33;
+  --blue: #3b82f6;
+  --purple: #8b5cf6;
+  --muted: #a5b4cc;
+  --border: rgba(148, 163, 184, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #f1f5f9;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(59, 130, 246, 0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(139, 92, 246, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #080d20,
+      #111735 50%,
+      #0b1025
+    );
+
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  color: #f8fafc;
+}
+
+p {
+  color: var(--muted);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 3px;
+}
+
+input, select, textarea {
+  color: #f1f5f9;
+  background: #111a33;
+  border: 1px solid #34415f;
+  border-radius: 10px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8190aa;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.16);
+  outline: none;
+}
+
+select option {
+  color: #f1f5f9;
+  background: #111a33;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #93c5fd;
+}
+
+::selection {
+  color: white;
+  background: #6d28d9;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080d20;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #37466b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
